@@ -31,7 +31,7 @@ public class Musica implements Serializable{
     @Column(name="Precio")
     private double precio;
 
-    @Column(name="Descripción")
+    @Column(name="Descripcion")
     private String descripcion;
 
     @Column(name="Etiquetas")

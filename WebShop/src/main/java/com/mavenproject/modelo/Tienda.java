@@ -34,11 +34,11 @@ public class Tienda implements Serializable{
     @Enumerated(value = EnumType.STRING)
     private TipoTienda tipo; //Esta columna es dudosa, hay que confirmar que esta bien
 
-    @Column(name="Valoracion")
+    @Column(name="ValoracionTienda")
     private int valoracionTienda;
 
     //Atributo para controlar el número de usuarios que han puntuado para poder realizar una media
-    @Column(name="NValoraciones")
+    @Column(name="NValoracionesTienda")
     private int nValoracionesTienda;
 
     public int getIdTienda() {
@@ -111,6 +111,6 @@ public class Tienda implements Serializable{
 	return true;
     }
 
-    
+
 
 }

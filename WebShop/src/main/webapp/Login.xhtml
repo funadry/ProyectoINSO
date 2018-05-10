@@ -8,16 +8,19 @@
 
     <body>
 
-        <ui:composition template="./WEB-INF/template/loginTemplate.xhtml">
+        <ui:composition template="./WEB-INF/templates/loginTemplate.xhtml">
 
             <ui:define name="content">
+		<p>Inicia Sesión</p>
 		<h:form>
-		    <h:panelGrid columns="1">
-			<p:inputText value="" id="nickLogin"/>
-			<p:password value="" id="passLogin"/>
-			<p:button value="Entrar">
-			    <f:param name="buttonLogin" value="" />
-			</p:button>
+		    <h:panelGrid columns="2">
+			<p:outputLabel value="Nombre de usuario" for="nickLogin"/>
+			<p:inputText id="nickLogin" value="#{loginController.usuario.nick}" />
+			<p:outputLabel value="Contraseña" for="passLogin"/>
+			<p:password value="#{loginController.usuario.password}" id="passLogin"/>
+
+			<p:column/>
+			<p:commandButton value="Entrar" action="#{loginController.comprobarUsuario()}"/>
 		    </h:panelGrid>
 
 		</h:form>
